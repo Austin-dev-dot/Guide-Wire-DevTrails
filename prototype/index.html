@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigShield AI | Income Protection for Delivery Workers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script defer src="js/app.js"></script>
+</head>
+<body>
+    <div class="page-shell">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+
+        <header class="site-header">
+            <a class="brand" href="#top" aria-label="GigShield AI home">
+                <span class="brand-mark">
+                    <i data-lucide="shield-check"></i>
+                </span>
+                <span>
+                    <strong>GigShield AI</strong>
+                    <small data-i18n="brandTag">Income protection only</small>
+                </span>
+            </a>
+
+            <div class="header-actions">
+                <button class="ghost-button" type="button" id="jumpToAdmin" data-scroll-target="adminSection" data-i18n="judgeView">Judge View</button>
+                <button class="primary-button" type="button" id="jumpToApp" data-scroll-target="appSection" data-i18n="openApp">Open App</button>
+            </div>
+        </header>
+
+        <main id="top">
+            <section class="hero section">
+                <div class="hero-copy">
+                    <span class="eyebrow" data-i18n="heroEyebrow">AI-powered parametric income shield</span>
+                    <h1 data-i18n="heroTitle">Protect Your Daily Income. Automatically.</h1>
+                    <p class="hero-subtext" data-i18n="heroSubtitle">Get paid when rain, heat, or disruptions stop your work.</p>
+
+                    <div class="hero-actions">
+                        <button class="primary-button" type="button" data-scroll-target="appSection" data-i18n="heroPrimary">Get Started</button>
+                        <button class="secondary-button" type="button" id="loadDemoWorker" data-i18n="heroSecondary">View Sample Dashboard</button>
+                    </div>
+
+                    <div class="hero-proof">
+                        <div class="proof-chip">
+                            <i data-lucide="file-check-2"></i>
+                            <span data-i18n="heroProofOne">No paperwork</span>
+                        </div>
+                        <div class="proof-chip">
+                            <i data-lucide="zap"></i>
+                            <span data-i18n="heroProofTwo">Instant payouts</span>
+                        </div>
+                        <div class="proof-chip">
+                            <i data-lucide="calendar-sync"></i>
+                            <span data-i18n="heroProofThree">Weekly flexible plans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-panel card">
+                    <div class="panel-header">
+                        <div>
+                            <p class="panel-label" data-i18n="heroPanelLabel">Today in Koramangala</p>
+                            <h2 data-i18n="heroPanelTitle">Your income shield is watching the road.</h2>
+                        </div>
+                        <span class="status-pill status-live">
+                            <span class="live-dot"></span>
+                            <span data-i18n="heroPanelLive">Live risk</span>
+                        </span>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <article class="metric-card">
+                            <span data-i18n="metricProtected">Protected today</span>
+                            <strong id="heroProtectedValue">₹1,200</strong>
+                            <small data-i18n="metricProtectedHint">Weekly coverage available</small>
+                        </article>
+                        <article class="metric-card">
+                            <span data-i18n="metricPayout">Last payout</span>
+                            <strong id="heroPayoutValue">₹450</strong>
+                            <small data-i18n="metricPayoutHint">Credited in 5 seconds</small>
+                        </article>
+                    </div>
+
+                    <div class="event-strip">
+                        <div class="event-chip">
+                            <i data-lucide="cloud-rain"></i>
+                            <div>
+                                <strong data-i18n="eventRainTitle">Heavy rain alert</strong>
+                                <span data-i18n="eventRainHint">Expected loss ₹420</span>
+                            </div>
+                        </div>
+                        <div class="event-chip">
+                            <i data-lucide="brain-circuit"></i>
+                            <div>
+                                <strong data-i18n="eventAiTitle">AI recommendation</strong>
+                                <span data-i18n="eventAiHint">Increase cover for tomorrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <span class="eyebrow" data-i18n="howEyebrow">How it works</span>
+                    <h2 data-i18n="howTitle">Protection in three simple steps</h2>
+                </div>
+
+                <div class="three-up">
+                    <article class="card feature-card">
+                        <span class="step-index">01</span>
+                        <i data-lucide="radar" class="feature-icon"></i>
+                        <h3 data-i18n="howStepOneTitle">AI tracks risk</h3>
+                        <p data-i18n="howStepOneBody">Weather, location, and disruption signals update your risk automatically.</p>
+                    </article>
+                    <article class="card feature-card">
+                        <span class="step-index">02</span>
+                        <i data-lucide="wallet-cards" class="feature-icon"></i>
+                        <h3 data-i18n="howStepTwoTitle">You pay weekly</h3>
+                        <p data-i18n="howStepTwoBody">Micro-pricing matches how delivery workers actually earn every week.</p>
+                    </article>
+                    <article class="card feature-card">
+                        <span class="step-index">03</span>
+                        <i data-lucide="badge-indian-rupee" class="feature-icon"></i>
+                        <h3 data-i18n="howStepThreeTitle">Payouts happen automatically</h3>
+                        <p data-i18n="howStepThreeBody">If a trigger is met, GigShield creates and pays the claim without any form-filling.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section split-section">
+                <div class="section-heading compact">
+                    <span class="eyebrow" data-i18n="whyEyebrow">Why GigShield AI</span>
+                    <h2 data-i18n="whyTitle">Built for workers who need clarity fast</h2>
+                </div>
+
+                <div class="card list-card">
+                    <div class="list-item">
+                        <i data-lucide="clipboard-minus"></i>
+                        <div>
+                            <strong data-i18n="whyOneTitle">No paperwork</strong>
+                            <p data-i18n="whyOneBody">Claims start from external data, not from manual proof.</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <i data-lucide="timer-reset"></i>
+                        <div>
+                            <strong data-i18n="whyTwoTitle">Instant payouts</strong>
+                            <p data-i18n="whyTwoBody">Money is routed to UPI or wallet as soon as verification finishes.</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <i data-lucide="sliders-horizontal"></i>
+                        <div>
+                            <strong data-i18n="whyThreeTitle">Weekly flexible plans</strong>
+                            <p data-i18n="whyThreeBody">Coverage adjusts with your earnings pattern and current disruption risk.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="card scenario-card">
+                    <span class="eyebrow" data-i18n="scenarioEyebrow">Real-life scenario</span>
+                    <h3 data-i18n="scenarioTitle">Heavy rain stops deliveries. You still earn ₹500.</h3>
+                    <p data-i18n="scenarioBody">Rainfall crosses the trigger in your zone, GigShield detects income loss, verifies your activity, and sends a payout instantly.</p>
+                    <div class="scenario-line">
+                        <span data-i18n="scenarioSignal">Trigger</span>
+                        <strong data-i18n="scenarioSignalValue">Rain above 50 mm/hr</strong>
+                    </div>
+                    <div class="scenario-line">
+                        <span data-i18n="scenarioPayout">Payout</span>
+                        <strong data-i18n="scenarioPayoutValue">₹500 protected automatically</strong>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="section">
+                <div class="cta-banner card">
+                    <div>
+                        <span class="eyebrow" data-i18n="ctaEyebrow">Zero-touch insurance</span>
+                        <h2 data-i18n="ctaTitle">Start protecting your income today.</h2>
+                        <p data-i18n="ctaBody">Fast onboarding, transparent AI decisions, and no manual claim filing.</p>
+                    </div>
+                    <button class="primary-button" type="button" data-scroll-target="appSection" data-i18n="ctaButton">Start now</button>
+                </div>
+            </section>
+
+            <section class="section" id="appSection">
+                <div class="section-heading">
+                    <span class="eyebrow" data-i18n="appEyebrow">Full worker flow</span>
+                    <h2 data-i18n="appTitle">Onboard once. Stay protected every week.</h2>
+                    <p data-i18n="appBody">The setup panel updates the worker dashboard live, so judges can see how the experience changes for each worker profile.</p>
+                </div>
+
+                <div class="workspace-grid">
+                    <section class="card onboarding-card">
+                        <div class="panel-header">
+                            <div>
+                                <p class="panel-label" data-i18n="onboardingLabel">3-step onboarding</p>
+                                <h3 data-i18n="onboardingTitle">Create a worker profile</h3>
+                            </div>
+                            <span class="status-pill status-soft" id="onboardingStatus">Step 1 of 3</span>
+                        </div>
+
+                        <div class="stepper" role="tablist" aria-label="Onboarding steps">
+                            <button class="step-pill is-active" type="button" data-step-target="1">
+                                <span class="step-number">1</span>
+                                <span data-i18n="stepOneShort">Identity</span>
+                            </button>
+                            <button class="step-pill" type="button" data-step-target="2">
+                                <span class="step-number">2</span>
+                                <span data-i18n="stepTwoShort">Platform</span>
+                            </button>
+                            <button class="step-pill" type="button" data-step-target="3">
+                                <span class="step-number">3</span>
+                                <span data-i18n="stepThreeShort">Location</span>
+                            </button>
+                        </div>
+
+                        <form id="onboardingForm" novalidate>
+                            <section class="step-pane is-active" data-step="1">
+                                <label class="field">
+                                    <span data-i18n="fieldName">Name</span>
+                                    <input id="workerName" name="workerName" type="text" maxlength="40" placeholder="Ravi Kumar" value="Ravi Kumar">
+                                </label>
+
+                                <label class="field">
+                                    <span data-i18n="fieldPhone">Phone number</span>
+                                    <div class="inline-field">
+                                        <input id="workerPhone" name="workerPhone" type="tel" inputmode="numeric" maxlength="10" placeholder="9876543210" value="9876543210">
+                                        <button class="secondary-button inline-action" id="sendOtpButton" type="button" data-i18n="sendOtp">Send OTP</button>
+                                    </div>
+                                </label>
+
+                                <label class="field">
+                                    <span data-i18n="fieldOtp">OTP</span>
+                                    <div class="inline-field">
+                                        <input id="otpInput" name="otpInput" type="text" inputmode="numeric" maxlength="4" placeholder="4821">
+                                        <button class="secondary-button inline-action" id="verifyOtpButton" type="button" data-i18n="verifyOtp">Verify</button>
+                                    </div>
+                                </label>
+
+                                <p class="helper-text" id="otpHelper" aria-live="polite" data-i18n="otpHint">Tap Send OTP to generate a demo code for this prototype.</p>
+                            </section>
+
+                            <section class="step-pane" data-step="2">
+                                <fieldset class="platform-fieldset">
+                                    <legend data-i18n="fieldPlatform">Select platform</legend>
+                                    <div class="platform-grid">
+                                        <label class="choice-chip">
+                                            <input type="radio" name="platform" value="Swiggy" checked>
+                                            <span>Swiggy</span>
+                                        </label>
+                                        <label class="choice-chip">
+                                            <input type="radio" name="platform" value="Zomato">
+                                            <span>Zomato</span>
+                                        </label>
+                                        <label class="choice-chip">
+                                            <input type="radio" name="platform" value="Amazon">
+                                            <span>Amazon</span>
+                                        </label>
+                                        <label class="choice-chip">
+                                            <input type="radio" name="platform" value="Zepto">
+                                            <span>Zepto</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <div class="mini-note">
+                                    <i data-lucide="sparkles"></i>
+                                    <p data-i18n="platformHint">Platform choice fine-tunes working hours, peak demand windows, and premium suggestions.</p>
+                                </div>
+                            </section>
+
+                            <section class="step-pane" data-step="3">
+                                <div class="location-stack">
+                                    <label class="field">
+                                        <span data-i18n="fieldCity">City</span>
+                                        <select id="citySelect" name="city">
+                                            <option value="Bengaluru">Bengaluru</option>
+                                            <option value="Chennai">Chennai</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Mumbai">Mumbai</option>
+                                        </select>
+                                    </label>
+
+                                    <label class="field">
+                                        <span data-i18n="fieldZone">Micro-zone</span>
+                                        <input id="zoneInput" name="zone" type="text" value="Koramangala K-04" readonly>
+                                    </label>
+                                </div>
+
+                                <div class="location-actions">
+                                    <button class="secondary-button" id="grantLocationButton" type="button" data-i18n="grantLocation">Use current location</button>
+                                    <span class="helper-text" id="locationStatus" aria-live="polite" data-i18n="locationHint">Location access improves trigger accuracy and fraud checks.</span>
+                                </div>
+
+                                <label class="field">
+                                    <span data-i18n="fieldEarnings">Average daily earnings</span>
+                                    <div class="range-stack">
+                                        <input id="earningsRange" type="range" min="500" max="2500" step="100" value="1100">
+                                        <div class="inline-field">
+                                            <input id="earningsInput" name="earnings" type="number" min="500" max="2500" step="100" value="1100">
+                                            <span class="value-tag">INR/day</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </section>
+                        </form>
+
+                        <div class="onboarding-actions">
+                            <button class="ghost-button" id="previousStepButton" type="button" data-i18n="previousStep">Back</button>
+                            <button class="primary-button" id="nextStepButton" type="button" data-i18n="nextStep">Next</button>
+                        </div>
+
+                        <div class="card subtle-card ai-preview">
+                            <div class="panel-header compact">
+                                <div>
+                                    <p class="panel-label" data-i18n="previewLabel">AI recommendation</p>
+                                    <h3 data-i18n="previewTitle">Suggested weekly plan</h3>
+                                </div>
+                                <span class="status-pill" id="previewRiskBadge">Medium risk</span>
+                            </div>
+                            <div id="recommendationMetrics" class="recommendation-grid"></div>
+                            <p id="riskExplanation" class="support-text"></p>
+                        </div>
+                    </section>
+
+                    <section class="device-column">
+                        <div class="device-shell card">
+                            <div class="device-top">
+                                <span class="camera-cutout" aria-hidden="true"></span>
+                                <div class="device-header">
+                                    <div>
+                                        <p class="panel-label">GigShield AI</p>
+                                        <h3 id="deviceTitle" data-i18n="deviceTitle">Worker dashboard</h3>
+                                    </div>
+                                    <span class="status-pill status-soft" id="deviceStatus">Preview mode</span>
+                                </div>
+                            </div>
+
+                            <div class="device-body">
+                                <div class="mini-banner" id="workerBanner" aria-live="polite">Preview updates as you change the profile.</div>
+
+                                <section class="app-view is-active" id="dashboardView"></section>
+                                <section class="app-view" id="claimsView"></section>
+                                <section class="app-view" id="adminView"></section>
+                                <section class="app-view" id="settingsView"></section>
+                            </div>
+
+                            <nav class="app-nav" aria-label="App navigation">
+                                <button class="nav-pill is-active" type="button" data-view="dashboard">
+                                    <i data-lucide="layout-dashboard"></i>
+                                    <span data-i18n="navDashboard">Dashboard</span>
+                                </button>
+                                <button class="nav-pill" type="button" data-view="claims">
+                                    <i data-lucide="file-text"></i>
+                                    <span data-i18n="navClaims">Claims</span>
+                                </button>
+                                <button class="nav-pill" type="button" data-view="admin">
+                                    <i data-lucide="bar-chart-3"></i>
+                                    <span data-i18n="navAdmin">Admin</span>
+                                </button>
+                                <button class="nav-pill" type="button" data-view="settings">
+                                    <i data-lucide="settings-2"></i>
+                                    <span data-i18n="navSettings">Settings</span>
+                                </button>
+                            </nav>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="section" id="adminSection">
+                <div class="section-heading compact">
+                    <span class="eyebrow" data-i18n="judgeEyebrow">Judge-ready summary</span>
+                    <h2 data-i18n="judgeTitle">Why this model feels trustworthy</h2>
+                    <p data-i18n="judgeBody">GigShield uses transparent triggers, income-only coverage, and a visible AI explanation to make automated insurance feel understandable.</p>
+                </div>
+
+                <div class="three-up">
+                    <article class="card judge-card">
+                        <i data-lucide="shield"></i>
+                        <h3 data-i18n="judgeOneTitle">Income protection only</h3>
+                        <p data-i18n="judgeOneBody">Every screen reinforces the single promise: protect lost earnings from external disruptions.</p>
+                    </article>
+                    <article class="card judge-card">
+                        <i data-lucide="bot"></i>
+                        <h3 data-i18n="judgeTwoTitle">AI explains itself</h3>
+                        <p data-i18n="judgeTwoBody">Workers see why risk changes, why pricing moves, and why payouts happen.</p>
+                    </article>
+                    <article class="card judge-card">
+                        <i data-lucide="badge-check"></i>
+                        <h3 data-i18n="judgeThreeTitle">Zero-touch claims</h3>
+                        <p data-i18n="judgeThreeBody">Claims trigger automatically from weather, AQI, heat, and curfew signals without manual filing.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div>
+                <strong>GigShield AI</strong>
+                <p data-i18n="footerCopy">A simple parametric insurance experience for gig delivery workers in India.</p>
+            </div>
+            <a href="#top" class="footer-link" data-i18n="backToTop">Back to top</a>
+        </footer>
+
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+</body>
+</html>
